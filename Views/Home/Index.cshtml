@@ -6,3 +6,14 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<form action= '@Url.Action("guardarDatos" , "home")' method = "post">
+
+<br>Nombre completo: <input type="text" name="Nombre"></br>
+<br>Fecha de Nacimiento: <input type="date" name="fechaNacimiento"></br>
+
+<br>TipoComida: <input type="radio" name= "TipoComida" value= "caliente" > caliente  <input type="radio" name= "TipoComida" value= "frio" > frio</br>
+<br>Presupuesto: <input type="number" name="presupuesto"></br>
+<br>cantidadPersonas <input type="number" name="cantidadPersonas"></br>
+
+</form>
