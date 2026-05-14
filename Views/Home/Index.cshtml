@@ -7,13 +7,13 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<form action= '@Url.Action("guardarDatos" , "home")' method = "post">
+<form action= '@Url.Action("GenerarSugerencia" , "home")' method = "post">
 
 <br>Nombre completo: <input type="text" name="Nombre"></br>
 <br>Fecha de Nacimiento: <input type="date" name="fechaNacimiento"></br>
 
-<br>TipoComida: <input type="radio" name= "TipoComida" value= "caliente" > caliente  <input type="radio" name= "TipoComida" value= "frio" > frio</br>
+<br>TipoComida: <input type="radio" name= "TipoComida" value= "Caliente" > Caliente  <input type="radio" name= "TipoComida" value= "Frio" > Frio</br>
 <br>Presupuesto: <input type="number" name="presupuesto"></br>
-<br>cantidadPersonas <input type="number" name="cantidadPersonas"></br>
+<br>CantidadPersonas: <input type="number" name="cantidadPersonas"></br>
 
 </form>
