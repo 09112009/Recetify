@@ -7,7 +7,7 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<form action= '@Url.Action("GenerarSugerencia" , "home")' method = "post">
+<form action= '@Url.Action("GenerarSugerencia" , "home")' method = "get">
 
 <br>Nombre completo: <input type="text" name="Nombre"></br>
 <br>Fecha de Nacimiento: <input type="date" name="fechaNacimiento"></br>
@@ -16,4 +16,5 @@
 <br>Presupuesto: <input type="number" name="presupuesto"></br>
 <br>CantidadPersonas: <input type="number" name="cantidadPersonas"></br>
 
+<input type = "submit" value = "guardar"/>
 </form>

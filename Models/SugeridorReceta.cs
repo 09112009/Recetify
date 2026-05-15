@@ -4,12 +4,13 @@ public class SugeridorReceta
 {
 
 public string Nombre {get; set;}
-public date fechaNacimiento {get; set;}
+public DateTime fechaNacimiento {get; set;}
 public string TipoComida {get; set;}
 public int presupuesto  {get; set;}
 public int cantidadPersonas  {get; set;}
 
-}
+
+
 
 public int CalcularEdad(DateTime fechaNacimiento)
 {
@@ -25,9 +26,9 @@ public int CalcularEdad(DateTime fechaNacimiento)
 
     return edad;
 }
-public string DeterminarPlato(string tipoComida, int presupuesto)
+public string DeterminarPlato()
 {
-    if (tipoComida == "Caliente")
+    if (TipoComida == "Caliente")
     {
         if (presupuesto < 3000)
         {
@@ -42,7 +43,7 @@ public string DeterminarPlato(string tipoComida, int presupuesto)
             return "Pollo al horno con guarnición";
         }
     }
-    else if (tipoComida == "Fría")
+    else if (TipoComida == "Fría")
     {
         if (presupuesto < 3000)
         {
@@ -64,50 +65,50 @@ public string DeterminarPlato(string tipoComida, int presupuesto)
 
 }
 
-public int CalcularTiempo(int cantidadPersonas)
+public int CalcularTiempo()
 {
 
-    if (tipoComida == "Caliente")
+    if (TipoComida == "Caliente")
     {
         if (cantidadPersonas >= 1 && cantidadPersonas <= 3 )
         {
 
-            return "20 min";
+            return 20;
         }
          if (cantidadPersonas >= 4 && cantidadPersonas <= 7  )
         {
 
-            return "40 min";
+            return 40;
         }
          if (cantidadPersonas >= 8)
         {
 
-            return "80 min";
+            return 80;
         }
        
     }
-    else if (tipoComida == "Fría")
+    else if (TipoComida == "Fría")
     {
         if (cantidadPersonas >= 1 && cantidadPersonas <= 3 )
         {
-            return "10 min" ;
+            return 10 ;
         }
         if(cantidadPersonas >= 4 && cantidadPersonas <= 7)
         {
-           return "20 min";
+           return 20;
         }
         if(cantidadPersonas >= 8)
         {
-           return "40 min";
+           return 40;
         }
     }  
-        
+        return 0;
 
 }
 
 
 
-public string DeterminarDificultad(int presupuesto, int cantidadPersonas)
+public string DeterminarDificultad()
 {
     
     if (cantidadPersonas >= 8)
@@ -123,4 +124,5 @@ public string DeterminarDificultad(int presupuesto, int cantidadPersonas)
 
     
     return "Intermedio";
+}
 }
