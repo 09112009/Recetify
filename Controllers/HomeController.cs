@@ -18,10 +18,9 @@ public class HomeController : Controller
         return View();
     }
 
-  IActionResult GenerarSugerencia(SugeridorReceta datos)
+  public IActionResult GenerarSugerencia(SugeridorReceta datos)
 {
     ViewBag.Plato = datos.DeterminarPlato();
-
     ViewBag.Tiempo = datos.CalcularTiempo();
     ViewBag.Dificultad = datos.DeterminarDificultad();
     return View("Resultado");
