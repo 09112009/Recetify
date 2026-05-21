@@ -20,6 +20,10 @@ public class HomeController : Controller
 
   public IActionResult GenerarSugerencia(SugeridorReceta datos)
 {
+    ViewBag.Nombre = datos.Nombre;
+    ViewBag.cantidadPersonas = datos.cantidadPersonas;
+    ViewBag.Edad = datos.CalcularEdad();
+
     ViewBag.Plato = datos.DeterminarPlato();
     ViewBag.Tiempo = datos.CalcularTiempo();
     ViewBag.Dificultad = datos.DeterminarDificultad();

@@ -12,7 +12,7 @@ public int cantidadPersonas  {get; set;}
 
 
 
-public int CalcularEdad(DateTime fechaNacimiento)
+public int CalcularEdad()
 {
     DateTime hoy = DateTime.Today;
 
